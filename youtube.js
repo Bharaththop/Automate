@@ -7,28 +7,8 @@ const fs = require('fs');
 const DATE = moment().format(); 
 
 
-const makecommit = n =>{
-    if (n===0) return simpleGit().push();
-    const min = 0;
-    const max = 6;
-    const max1= 54
-
-    const x = Math.floor(Math.random() * (max - min + 1)) + min;
-    const y = Math.floor(Math.random() * (max1 - min + 1)) + min;
+const makecommit = content =>{
     
-
-    
-    
-    const DATE =moment().subtract(1,'y').add(y,'w').add(x,'d').format();
-    
-    
-    
-
-    
-
-   
-
-
 
 // Read the JSON file
     fs.readFile(File_path, 'utf8', (err, data) => {
@@ -47,7 +27,7 @@ const makecommit = n =>{
     }
 
   // Modify the value
-  jsonData.date = DATE;
+  jsonData.passage = content;
 
   // Convert the updated JSON object back to a string
   const updatedData = JSON.stringify(jsonData, null, 2);
@@ -59,8 +39,7 @@ const makecommit = n =>{
       return;
     }
     console.log('File has been updated successfully.');
-    simpleGit().add([File_path]).commit('updated file',
-    makecommit.bind(this,--n));
+    simpleGit().add([File_path]).commit('updated file');
   });
 });
 
@@ -74,7 +53,13 @@ const makecommit = n =>{
     
     
 };
-makecommit(50);
+
+const passage = "jjfv.sdvsdhvbls.dbdvylsbv";
+const passageList = passage.split(".");
+for (const text of passageList) {
+  makecommit(text);
+}
+
 
 
 
