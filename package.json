@@ -1,0 +1,28 @@
+{
+  "name": "some",
+  "version": "1.0.0",
+  "description": "for dependency use",
+  "main": "youtube.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "jsonfile": "^6.1.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "simple-git": "^3.19.1",
+    "simplegit": "^1.0.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bharaththop/Automate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bharaththop/Automate/issues"
+  },
+  "homepage": "https://github.com/Bharaththop/Automate#readme"
+}
